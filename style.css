@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    color: white;
+    background: rgb(41, 41, 41);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 1rem;
+    font-size: 2em;
+    color: #0f0;
+    animation: colorChange 1s linear infinite;
+    margin: 2rem;
+    border: solid rgb(24, 24, 24) 1px;
+    transition: .3s all ease;
+}
+
+.content h1:hover {
+    box-shadow: 0 0px 30px 12px rgba(0, 0, 0, 0.322);
+}
+
+@keyframes colorChange {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.lamp1,
+.lamp2 {
+    position: absolute;
+    width: 4rem;
+    fill: white;
+
+}
+.lamp1 {
+    left: 65px;
+    top: 45px;
+}
+.lamp2 {
+    right: 65px;
+    bottom: 120px;
+}
+
+.lamp1 {
+    animation: lampAnimate 3s linear infinite;
+}
+.lamp2 {
+    animation: lampAnimate 5s linear infinite;
+}
+
+@keyframes lampAnimate {
+    0% {
+        transform: rotate(45deg);
+    }
+    25% {
+
+        transform: rotate(0deg);
+    }
+    50% {
+
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 2rem;
+    background: rgb(26, 26, 26);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
